@@ -1,0 +1,21 @@
+# Load the Liberty file 
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+#Read RTL
+read_verilog fifo.v
+
+# Run synthesis
+synth -top synchronous_fifo
+
+# Map to standard cells from Liberty
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# Generate area/timing report
+stat -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+#Write netlist to fifo_netlist.v
+write_verilog fifo_netlist.v
+
+#Show netlist (.dot file) using Graphviz
+show -format dot -prefix fifo_netlist
