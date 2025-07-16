@@ -1,7 +1,4 @@
 # Synchronous FIFO 
-### Structure 
-<img width="591" height="273" alt="FIFO drawio(1)" src="https://github.com/user-attachments/assets/13244c13-abe4-47df-820f-0883010b503e" />
-
 
 # 🚀 Synchronous FIFO (First-In-First-Out) Buffer – Verilog RTL Design
 
@@ -20,6 +17,8 @@
 
 <img width="1024" height="538" alt="image" src="https://github.com/user-attachments/assets/ce6d7aba-6561-475f-a4d5-fd771314f53d" />
 
+>[!NOTE]
+> It is commonly used in digital systems to buffer data between two subsystems that are operating under the `same clock domain` but have `different data processing` speeds. 
 
 ## 🧠 Motivation
 
