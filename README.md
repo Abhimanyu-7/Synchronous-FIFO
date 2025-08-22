@@ -1,12 +1,12 @@
 # Synchronous FIFO 
 
-# 🚀 Synchronous FIFO (First-In-First-Out) Buffer – Verilog RTL Design
+# Synchronous FIFO (First-In-First-Out) Buffer – Verilog RTL Design
 
 ![License](https://img.shields.io/badge/Language-Verilog-informational)  
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
 ![Clock Domain](https://img.shields.io/badge/Clock-Synchronous-blue)
 
-## 📘 Overview
+## Overview
 
 ### What is it?
   A Synchronous FIFO is a type of a `data buffer` used to store data temporarily while it is moving from one place to another.
@@ -20,15 +20,15 @@
 >[!NOTE]
 > It is commonly used in digital systems to buffer data between two subsystems that are operating under the `same clock domain` but have `different data processing` speeds. 
 
-## 🧠 Motivation
+## Motivation
 
 In modern high-speed digital systems like SoCs, CPUs, DSPs, and DMA controllers, processing units may not always keep up with the rate at which data is being received from external interfaces or sensors. A FIFO provides **temporal storage**, enabling the receiver to process data at its own pace without data overrun or underrun.
 
-> 💡 A Synchronous FIFO becomes critical when **both read and write operations occur at high speeds but are governed by the same system clock.**
+> A Synchronous FIFO becomes critical when **both read and write operations occur at high speeds but are governed by the same system clock.**
 
 ---
 
-## 📐 Architecture
+## Architecture
 
 The FIFO operates using:
 
@@ -38,13 +38,13 @@ The FIFO operates using:
 - **Full and Empty Flags** for flow control
 - **Parameterizable Depth and Data Width**
 
-### 🔧 Block Diagram
+### Block Diagram
 
 ![FIFO Architecture](https://github.com/user-attachments/assets/13244c13-abe4-47df-820f-0883010b503e)
 
 ---
 
-## 🧰 Features
+## Features
 
 ✅ Synchronous design with single clock domain  
 ✅ Parameterizable Data Width and Depth  
@@ -56,7 +56,7 @@ The FIFO operates using:
 
 ---
 
-## 🧪 Testbench and Verification
+## Testbench and Verification
 
 - Developed a self-checking Verilog testbench to simulate:
   - Normal operation (Write → Read)
@@ -69,26 +69,26 @@ The FIFO operates using:
 
 ---
 
-## 🧠 Key Concepts Learned
+## Key Concepts Learned
 
-### 🟢 RTL Design:
+### RTL Design:
 - Memory management using `reg` arrays
 - Finite state transition logic
 - Pointer wrapping and gray coding (optional enhancement)
 
-### 🟡 Digital System Principles:
+### Digital System Principles:
 - FIFO as a decoupling mechanism
 - Avoiding metastability in FIFO boundary logic
 - Designing around the timing challenges in high-speed systems
 
-### 🔵 Verification Skills:
+### Verification Skills:
 - Building robust testbenches
 - Writing assertions for corner cases
 - Waveform debugging using `gtkwave`
 
 ---
 
-## 🔁 FIFO Operation States
+## FIFO Operation States
 
 | State      | Description                                         |
 |------------|-----------------------------------------------------|
@@ -101,14 +101,11 @@ The FIFO operates using:
 
 ---
 
-## 🛠️ Parameters
+## Parameters
 
 | Parameter       | Description                   | Example     |
 |----------------|-------------------------------|-------------|
 | `DATA_WIDTH`   | Width of each data word        | `8`, `16`   |
 | `FIFO_DEPTH`   | Total number of storage units  | `16`, `32`  |
 
----
-
-## 📂 File Structure
 
